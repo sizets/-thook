@@ -35,6 +35,8 @@ router.delete('/orders/:id', authenticate, orderController.cancelOrder);
 // Auth Controller (Public routes)
 router.post('/register', authController.register);
 router.post('/login', authController.login);
+router.post('/forgot-password', authController.forgotPassword);
+router.post('/reset-password', authController.resetPassword);
 router.get('/logout', authenticate, authController.logout);
 router.post('/contact', authController.contact);
 router.post('/subscribe', authController.subscribe);
